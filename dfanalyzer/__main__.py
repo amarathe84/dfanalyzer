@@ -1,3 +1,6 @@
+# File: dfanalyzer/dfanalyzer/__main__.py
+
+import sys
 import hydra
 import structlog
 from distributed import Client
@@ -60,6 +63,6 @@ def main(cfg: Config) -> None:
         if not isinstance(cluster, ExternalCluster):
             cluster.close()  # type: ignore
 
-
 if __name__ == "__main__":
-    main()
+    cli()
+
